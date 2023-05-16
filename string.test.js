@@ -1,12 +1,20 @@
-const string = require("./string")
+const stringLen = require("./stringlength")
+const stringRev = require("./stringreverse")
 
 
 test("accepts a string and returns its length", ()=>{
-        expect(string("Hi")).toBe(2);    
+        expect(stringLen("Hi")).toBe(2);    
     }
 )
 test("Throw an Error", ()=>{
    
-    expect(string("")).toMatch("Invalid string")
+    expect(stringLen("")).toMatch("Invalid string")
 }
 )
+test("Reverse string", ()=>{
+   
+    expect(stringRev("boy")).toMatch(/^yob$/)
+}
+)
+
+
